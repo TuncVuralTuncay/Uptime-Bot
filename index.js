@@ -11,7 +11,7 @@ if(!Array.isArray(get("links"))) {
 })
 
 
-setTimeout(() => {
+setInterval(() => {
 var linkler = get("links")
 if(!linkler) console.log("Sistemde Link Bulunamadı")
 var links = linkler.map(s => s.url)
