@@ -17,7 +17,8 @@ if(!linkler) console.log("Sistemde Link Bulunamadı")
 var links = linkler.map(s => s.url)
 links.forEach(s => {
 try {
-  fetch(s)
+  fetch(s,{hostname:s,path:"/",method:"GET",headers: {"Content-Type":"text/plain","User-Agent":"Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0",
+})
 } catch(e) {
     console.error(e)
 }
